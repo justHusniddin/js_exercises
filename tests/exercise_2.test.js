@@ -68,23 +68,23 @@ describe('Exercise @2', () => {
     const p1 = new Person("Samuel", 23);
     const p2 = new Person("Joel", 36)
     const p3 = new Person("Lily", 24)
-
+  
     it('Joel is older than me.', () => {
       const result = p1.compareAge(p2);
       expect(result).to.equal('Joel is older than me.');
     });
-
+  
     it('Samuel is younger than me.', () => {
       const result = p2.compareAge(p1);
       expect(result).to.equal('Samuel is younger than me.');
     });
-
-    it('Lily is the same age as me.', () => {
-      const result = p1.compareAge(p3);
-      expect(result).to.equal('Lily is the same age as me.');
+  
+    it('Lily is older than me.', () => {
+      const result = p1.compareAge(p3); 
+      expect(result).to.equal('Lily is older than me.');
     });
   });
-
+  
   describe('redundant Function', () => {
     it('should return function', () => {
       const result = redundant('apple');
